@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bgheader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/title"
+        android:layout_marginStart="100dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/uu"
+        android:background="@drawable/round_inactive"
+        android:gravity="center"
+        android:text="select date"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+
+        android:layout_marginTop="39dp"
+        android:text="Title"
+        android:textColor="#000"
+        android:layout_marginRight="1dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="18dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="69dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/title"
+            app:srcCompat="@drawable/round_active" />
+        <VideoView
+            android:id="@+id/videoview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </LinearLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_marginLeft="10dp"
+android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select date.."
+
+        android:textColor="#172646"
+        android:textSize="18sp" />
+    </LinearLayout></ScrollView>
+    <LinearLayout
+android:id="@+id/uu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/title"
+        android:background="@drawable/round_inactive"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+
+        android:orientation="vertical">
+
+
+
+        <TextView
+android:id="@+id/zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoom/Play"
+            android:textStyle="bold"
+            android:textColor="#172646"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+</RelativeLayout>
